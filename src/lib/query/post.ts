@@ -36,3 +36,28 @@ export const fetchTopPosts = async (): Promise<PostWithData[]> => {
     take: 5,
   });
 };
+
+
+export const fetchPostBySearch = async (term:string) : Promise<PostWithData[]> => {
+    return prisma.post.findMany({
+        include:{
+            topic: {select: {slug: true}},
+            _count: {select: {comments: true}},
+            user: {select: {name: true}}
+        }
+        ,where:{
+            OR:[
+                {
+                    title: {
+                        contains: term
+                    }
+                },
+                {
+                    content: {
+                        contains: term
+                    }
+                }
+            ]
+        }
+    })
+}

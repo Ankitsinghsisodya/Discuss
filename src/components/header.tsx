@@ -1,6 +1,6 @@
-import React from 'react'
-import { Input } from './ui/input'
+import React, { Suspense } from 'react'
 import AuthHeader from './auth-header'
+import SearchInput from './search-input'
 
 const HeaderPage = () => {
 
@@ -8,11 +8,13 @@ const HeaderPage = () => {
         <div className='grid grid-cols-3 h-14 items-center'>
             <div className='flex justify-start'><h1 className='font-bold text-xl'>Discuss</h1></div>
             <div className='flex justify-center items-center'>
-                <Input type="text" placeholder='Search post...' />
+                <Suspense>
+                    <SearchInput />
+                </Suspense>
             </div>
             <div className='flex justify-end gap-2'>
-           
-<AuthHeader/>
+
+                <AuthHeader />
             </div>
         </div>
     )
