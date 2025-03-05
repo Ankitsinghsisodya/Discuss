@@ -35,9 +35,9 @@ export const createComment = async ({postId, parentId}: {postId:string, parentId
       },
     };
   }
-  let comment: Comment;
+
   try {
-    comment = await prisma.comment.create({
+  await prisma.comment.create({
       data: {
         content: result.data.content,
         userId: session.user.id,

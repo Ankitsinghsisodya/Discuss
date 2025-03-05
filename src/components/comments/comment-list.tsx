@@ -1,7 +1,7 @@
 import React from 'react'
 import CommentShow from './comment-show'
 import { fetchCommentsByPostId } from '@/lib/query/comment'
-import TopicCreateForm from '../topics/TopicCreateForm'
+
 
 type CommentListProps = {
     postId: string
