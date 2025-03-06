@@ -2,7 +2,7 @@
 
 Discuss is a modern web application built with Next.js that allows users to create topics, start discussions, and engage in meaningful conversations with others. With a clean, intuitive interface and real-time updates, it's the perfect platform for community discussions.
 
-![Discuss Platform](https://example.com/discuss-screenshot.png)
+
 
 ## Features
 
